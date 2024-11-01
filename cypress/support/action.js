@@ -47,7 +47,6 @@ Cypress.Commands.add('LoanAccount', () => {
     cy.get('[id="productId"]').select("Amare Loan")
     cy.get('.chosen-single > span').click()
     cy.get('.chosen-search > input').type('WORKING CAPITAL')
-    // cy.get('#externalId').type('12597')
     cy.get('select#loanOfficerId').select("Employee, New")
     cy.get('[id="fundId"]').select("Mid loan funds")
     cy.get('input#expectedDisbursementDate').click()
@@ -71,7 +70,7 @@ Cypress.Commands.add('LoanApproval', () => {
     cy.get('[data-ng-show="openLoan"] > tbody > :nth-child(6) > :nth-child(1)').click()
     cy.get('.col-md-12.col-sm-12.primarydiv > .btn-group.pull-right > a:nth-of-type(2)').click()
     cy.get('#note').type('Approved')
-    // cy.get('#save').click()
+    cy.get('#save').click()
 
 
 
@@ -90,7 +89,7 @@ Cypress.Commands.add('LoanRepayment', () => {
     cy.get('[data-ng-show="openLoan"] > tbody > :nth-child(2) > :nth-child(1)').click()
     cy.get('.primarydiv > .pull-right > :nth-child(4)').click()
     cy.get('#note').type('Paid')
-    // cy.get('#save').click()
+    cy.get('#save').click()
 
 
 })
